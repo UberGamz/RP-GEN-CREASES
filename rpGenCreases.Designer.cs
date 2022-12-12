@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CustomNethook {
+namespace rpGenCreases {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace CustomNethook {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CustomNethook {
+    internal class rpGenCreases {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -39,7 +39,7 @@ namespace CustomNethook {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CustomNethook.CustomNethook", typeof(CustomNethook).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("rpGenCreases.rpGenCreases", typeof(rpGenCreases).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

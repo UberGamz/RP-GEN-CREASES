@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{48191FB3-2770-4CE7-B05B-8FD6EE248E34}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>CustomNethook</RootNamespace>
-    <AssemblyName>CustomNethook</AssemblyName>
+    <RootNamespace>rpGenCreases</RootNamespace>
+    <AssemblyName>rpGenCreases</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -57,7 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="CustomNethook.ft" />
+    <None Include="rpGenCreases.ft" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ChainDataInterop">
@@ -75,23 +75,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomNethook.cs" />
-    <Compile Include="CustomNethook.Designer.cs">
-      <DependentUpon>CustomNethook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="rpGenCreases.cs" />
+    <Compile Include="rpGenCreases.Designer.cs">
+      <DependentUpon>rpGenCreases.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CustomNethook.resx">
-      <DependentUpon>CustomNethook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="rpGenCreases.resx">
+      <DependentUpon>rpGenCreases.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

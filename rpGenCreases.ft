@@ -1,0 +1,10 @@
+﻿APPLICATION "_rpGenCreases_"
+FUNC_DLL "chooks\rpGenCreases.dll"
+RES_DLL "SAME"
+dnRES_NAME "_rpGenCreases.rpGenCreases"
+CATEGORY "Automation"
+FUNCTION NET "rpGenCreasesRun"
+dnSPNG "Run16"
+dnLPNG"Run32"
+dnTIP "RunTip"
+END_FUNCTION
