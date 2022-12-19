@@ -36,6 +36,8 @@ namespace _rpGenCreases
             var creaseX4 = 0.0;
             var creaseY3 = 0.0;
             var creaseY4 = 0.0;
+            int createdUpperCrease = 502;
+            int createdLowerCrease = 503;
 
             bool CreateLine1()
             {
@@ -77,8 +79,6 @@ namespace _rpGenCreases
                 //Selects all geometry on level 101
                 var selectedCreaseChain = ChainManager.ChainAll(101);
                 //Creates and names level 502 and level 503
-                int createdUpperCrease = 502;
-                int createdLowerCrease = 503;
                 LevelsManager.SetLevelName(502, "Upper Created Crease Geo");
                 LevelsManager.SetLevelName(503, "Lower Created Crease Geo");
 
@@ -96,11 +96,10 @@ namespace _rpGenCreases
                     {
                         lowerCreaseID.Add(entity.GetEntityID());
                         entity.Color = 11;
-                        entity.Selected = true;
+                        entity.Level = createdLowerCrease;
+                        entity.Selected = false;
                         entity.Commit();
                     }
-                    //Moves result geometry
-                    GeometryManipulationManager.MoveSelectedGeometryToLevel(createdLowerCrease, true);
                     //Clears geometry in result
                     GraphicsManager.ClearColors(new GroupSelectionMask(true));
 
@@ -113,11 +112,10 @@ namespace _rpGenCreases
                     {
                         upperCreaseID.Add(entity.GetEntityID());
                         entity.Color = 10;
+                        entity.Level = createdUpperCrease;
                         entity.Selected = true;
                         entity.Commit();
                     }
-                    //Moves result geometry
-                    GeometryManipulationManager.MoveSelectedGeometryToLevel(createdUpperCrease, true);
                     //Clears geometry in result
                     GraphicsManager.ClearColors(new GroupSelectionMask(true));
                 }
@@ -152,12 +150,11 @@ namespace _rpGenCreases
                         foreach (var entity in creaseResultGeometryNew)
                         {
                             entity.Color = 10;
-                            entity.Selected = true;
+                            entity.Level = createdUpperCrease;
+                            entity.Selected = false;
                             entity.Commit();
                         }
                         //Moves result geometry
-                        int createdUpperCrease = 502;
-                        GeometryManipulationManager.MoveSelectedGeometryToLevel(createdUpperCrease, true);
                         //Clears geometry in result
                         GraphicsManager.ClearColors(new GroupSelectionMask(true));
                         //Deselects all
@@ -197,12 +194,12 @@ namespace _rpGenCreases
                         foreach (var entity in creaseResultGeometryNew)
                         {
                             entity.Color = 11;
-                            entity.Selected = true;
+                            entity.Level = createdLowerCrease;
+                            entity.Selected = false;
                             entity.Commit();
                         }
                         //Moves result geometry
-                        int createdLowerCrease = 503;
-                        GeometryManipulationManager.MoveSelectedGeometryToLevel(createdLowerCrease, true);
+                        
                         //Clears geometry in result
                         GraphicsManager.ClearColors(new GroupSelectionMask(true));
                         //Deselects all
