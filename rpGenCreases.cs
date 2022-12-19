@@ -83,7 +83,7 @@ namespace _rpGenCreases
                 LevelsManager.SetMainLevel(101);
                 LevelsManager.SetLevelVisible(101, true);
                 LevelsManager.RefreshLevelsManager();
-                GraphicsManager.Repaint(true);
+                GraphicsManager.Repaint(true);//required
 
                 //Selects all geometry on level 101
                 var selectedCreaseChain = ChainManager.ChainAll(101);
@@ -238,7 +238,7 @@ namespace _rpGenCreases
                 LevelsManager.SetMainLevel(101);
                 LevelsManager.SetLevelVisible(101, true);
                 LevelsManager.RefreshLevelsManager();
-                GraphicsManager.Repaint(true);
+                //GraphicsManager.Repaint(true);
 
                 var geomask = new GeometryMask { Lines = true };
                 var geoSel = new SelectionMask { };
@@ -285,18 +285,32 @@ namespace _rpGenCreases
                         line.Commit();
                     }
                     //Updates screen shown
-                    GraphicsManager.Repaint(true);
+                    //GraphicsManager.Repaint(true);
                 }
             } // Shortens creases
+            void deSelect()
+            {
+                var selectedGeo = SearchManager.GetGeometry();
+                foreach (var entity in selectedGeo)
+                {
+                    entity.Retrieve();
+                    entity.Selected = false;
+                    entity.Commit();
+                }
+            }
 
 
-
+            deSelect();
             DemoAlterLine();
+            deSelect();
             offsetCreasechain();
+            deSelect();
             connectUpperLines();
+            deSelect();
             connectLowerLines();
+            deSelect();
 
-
+            GraphicsManager.Repaint(true);
             return MCamReturn.NoErrors;
         }
     }
