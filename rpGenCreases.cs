@@ -254,14 +254,14 @@ namespace _rpGenCreases
                         {
                             if (line.Data.Point1.y >= line.Data.Point2.y)
                             {
-                                line.Data.Point1.y += -1;
-                                line.Data.Point2.y += +1;
+                                line.Data.Point1.y += -0.07;
+                                line.Data.Point2.y += +0.07;
                                 line.Selected = false;
                             };
                             if (line.Data.Point1.y <= line.Data.Point2.y)
                             {
-                                line.Data.Point1.y += +1;
-                                line.Data.Point2.y += -1;
+                                line.Data.Point1.y += +0.07;
+                                line.Data.Point2.y += -0.07;
                                 line.Selected = false;
                             };
                         };
@@ -270,14 +270,14 @@ namespace _rpGenCreases
                         {
                             if (line.Data.Point1.x >= line.Data.Point2.x)
                             {
-                                line.Data.Point1.x += -1;
-                                line.Data.Point2.x += +1;
+                                line.Data.Point1.x += -0.07;
+                                line.Data.Point2.x += +0.07;
                                 line.Selected = false;
                             };
                             if (line.Data.Point1.x <= line.Data.Point2.x)
                             {
-                                line.Data.Point1.x += +1;
-                                line.Data.Point2.x += -1;
+                                line.Data.Point1.x += +0.07;
+                                line.Data.Point2.x += -0.07;
                                 line.Selected = false;
                             };
                         };
